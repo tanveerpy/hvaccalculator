@@ -1,0 +1,7 @@
+.agent/
+vendor/
+node_modules/
+.env
+*.log
+.DS_Store
+dump_climate.php
