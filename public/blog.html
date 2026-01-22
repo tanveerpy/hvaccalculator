@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVAC Blog - Expert Tips & Guides</title>
+    <title>HVAC Blog - Expert Tips & Guides | HVACCalc</title>
+    <meta name="description"
+        content="Expert guides on Manual J load calculations, HVAC sizing, SEER2 standards, and home efficiency tips.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="assets/js/theme-config.js"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
@@ -25,165 +28,251 @@
                         <span
                             class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span
                                 class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
-                        <span
-                            class="ml-2 px-2 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-600 border border-blue-100">2026
-                            Pro</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
                         class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Calculator</a>
                     <a href="blog.html" class="text-sm font-bold text-blue-600">Blog</a>
+                    <a href="faq.html"
+                        class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">FAQ</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <div class="bg-white py-12 border-b border-slate-100">
+    <div class="bg-white py-16 border-b border-slate-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-3xl font-extrabold text-slate-900 mb-4">HVAC Insights & Guides</h1>
-            <p class="text-lg text-slate-600">Professional advice on Manual J, sizing, and efficiency.</p>
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">HVAC Insights & Guides</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto">Master the science of Heating & Cooling. No guesswork,
+                just physics.</p>
         </div>
     </div>
 
     <!-- Blog Grid -->
-    <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Cluster 1: Manual J Basics -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-blue-50 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-blue-200">
+                    <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
                 <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Basics</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">What Is a Manual J Load Calculation?</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Simple explanation for homeowners. Learn why it's the gold
-                    standard.</p>
-                <a href="articles/manual-j-basics.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">What Is a Manual
+                    J Load Calculation?</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">Stop guessing with your comfort. Discover why Manual J is
+                    the gold standard for residential HVAC sizing and how it saves you money.</p>
+                <a href="articles/manual-j-basics.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 2: How to Calculate -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-slate-50 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-200">
+                    <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
                 <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Tutorial</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">How to Calculate HVAC Load for a House</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">A step-by-step guide to the Manual J method for DIYers.
-                </p>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">How to Calculate
+                    HVAC Load (Step-by-Step)</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">A complete DIY guide to understanding the math behind
+                    residential heating and cooling sizing equations.</p>
                 <a href="articles/how-to-calculate-hvac-load.html"
-                    class="text-blue-600 font-bold hover:underline text-sm">Read Article &rarr;</a>
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 3: BTU Understanding -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-red-50 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-red-200">
+                    <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M13.5 4.938a7 7 0 11-9.006 1.737c.202-.257.59-.218.793.064.037.052.126.178.126.178a5.006 5.006 0 009.052-1.25 4.99 4.99 0 00-8.966-2.58c-.027-.04.09-.168.172-.25.22-.222.094-.61-.177-.732A7.042 7.042 0 0113.5 4.938zM14 12a1 1 0 11-2 0 1 1 0 012 0zm-2-2a1 1 0 100-2 1 1 0 000 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Sizing</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">How Many BTUs Do I Need?</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Stop guessing. Compare Manual J vs rough estimates.</p>
-                <a href="articles/how-many-btus.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <div class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Sizing</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">How Many BTUs Do
+                    I Need?</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">Square footage is just the starting point. Discover the
+                    real math behind correct system sizing.</p>
+                <a href="articles/how-many-btus.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 4: Tonnage -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-slate-100 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-300">
+                    <span class="text-4xl font-extrabold">2.5T</span>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Sizing</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">HVAC Tonnage Explained</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Converting Manual J BTUs to system size tons.</p>
+                <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2">Equipment</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">HVAC Tonnage
+                    Explained</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">It's not about how much the unit weighs. Here is the
+                    simple math to convert Manual J BTUs into Tons.</p>
                 <a href="articles/hvac-tonnage-explained.html"
-                    class="text-blue-600 font-bold hover:underline text-sm">Read Article &rarr;</a>
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 5: Oversizing Risks -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-yellow-50 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-yellow-300">
+                    <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Warning</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">Why Oversizing Is a Costly Mistake</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Humidity, mold, and short cycling explained.</p>
-                <a href="articles/oversizing-risks.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <div class="text-xs font-bold text-yellow-600 uppercase tracking-wider mb-2">Critical Warning</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Why Oversizing
+                    Your AC Is a Mistake</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">"Bigger is Better" is the most dangerous myth in HVAC.
+                    Learn about short cycling and mold risks.</p>
+                <a href="articles/oversizing-risks.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 6: Rule of Thumb -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-calculator.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="h-48 bg-slate-900 w-full relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-700">
+                    <span class="text-4xl font-extrabold line-through decoration-red-500">500</span>
+                </div>
+            </div>
             <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs font-bold text-red-600 uppercase tracking-wider mb-2">Myths</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">Manual J vs Rule-of-Thumb</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">What contractors get wrong and why accuracy matters.</p>
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Myths Busted</div>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Manual J vs
+                    Rule-of-Thumb</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">Why estimating based on square footage fails for modern
+                    homes. Compare the numbers.</p>
                 <a href="articles/manual-j-vs-rule-of-thumb.html"
-                    class="text-blue-600 font-bold hover:underline text-sm">Read Article &rarr;</a>
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article <svg
+                        class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg></a>
             </div>
         </article>
 
         <!-- Cluster 7: Insulation -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-structure.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
             <div class="p-6 flex-1 flex flex-col">
                 <div class="text-xs font-bold text-green-600 uppercase tracking-wider mb-2">Efficiency</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">How Insulation Affects HVAC Load</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Impact of R-values on your heating and cooling needs.</p>
-                <a href="articles/insulation-impact.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">How Insulation
+                    Affects HVAC Load</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">The secret to a smaller AC isn't a better unit—it's
+                    R-Value. See the math.</p>
+                <a href="articles/insulation-impact.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article
+                    &rarr;</a>
             </div>
         </article>
 
         <!-- Cluster 8: Windows -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-structure.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
             <div class="p-6 flex-1 flex flex-col">
                 <div class="text-xs font-bold text-green-600 uppercase tracking-wider mb-2">Efficiency</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">How Windows Affect HVAC Load</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Single vs double pane, SHGC, and orientation.</p>
-                <a href="articles/windows-impact.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">How Windows
+                    Affect HVAC Load</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">Windows are thermal holes. Understand U-Factor, SHGC, and
+                    Orientation.</p>
+                <a href="articles/windows-impact.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article
+                    &rarr;</a>
             </div>
         </article>
 
         <!-- Cluster 9: Air Leakage -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-structure.png" class="h-48 w-full object-cover">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition flex flex-col group">
             <div class="p-6 flex-1 flex flex-col">
                 <div class="text-xs font-bold text-green-600 uppercase tracking-wider mb-2">Efficiency</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">Air Leakage, ACH, and Infiltration</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">What Manual J accounts for regarding air sealing.</p>
-                <a href="articles/air-leakage-ach.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+                <h2 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">Air Leakage, ACH,
+                    and Infiltration</h2>
+                <p class="text-slate-600 text-sm mb-4 flex-1">The "Invisible Load." Why drafty homes cost 40% more to
+                    cool.</p>
+                <a href="articles/air-leakage-ach.html"
+                    class="text-blue-600 font-bold hover:underline text-sm inline-flex items-center">Read Article
+                    &rarr;</a>
             </div>
         </article>
 
-        <!-- Cluster 10: Hiring Pro -->
+        <!-- Cluster 10: Hiring -->
         <article
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition flex flex-col">
-            <img src="assets/images/cluster-pro.png" class="h-48 w-full object-cover">
-            <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">Hiring</div>
-                <h2 class="text-xl font-bold text-slate-900 mb-2">When to Hire a Pro for Manual J</h2>
-                <p class="text-slate-600 text-sm mb-4 flex-1">Licensed calculations vs DIY estimates.</p>
-                <a href="articles/hiring-hvac-pro.html" class="text-blue-600 font-bold hover:underline text-sm">Read
-                    Article &rarr;</a>
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 md:col-span-2 lg:col-span-3 overflow-hidden hover:shadow-lg transition flex flex-col group">
+            <div class="p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                    <div class="text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">Professional Advice
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition">When You
+                        Should Hire a Pro for a Manual J</h2>
+                    <p class="text-slate-600 text-lg mb-6">Online calculators are great for estimates, but permits
+                        require a stamp. Learn about certified reports.</p>
+                    <a href="articles/hiring-hvac-pro.html"
+                        class="inline-block px-6 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition-colors">Read
+                        Full Guide</a>
+                </div>
             </div>
         </article>
 
     </div>
 
+    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800 text-center">
         <p>&copy; 2026 HVAC Load Calculator. All rights reserved.</p>
     </footer>

@@ -4,54 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Leakage, ACH, and HVAC Load | HVACCalc</title>
+    <title>Air Leakage, ACH, and HVAC Load: The Infiltration Factor | HVACCalc</title>
+    <meta name="description"
+        content="Drafty house? Learn how Air Changes per Hour (ACH) and infiltration impact your HVAC Manual J calculation and sizing.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="../assets/js/theme-config.js"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
 <body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center"><a href="../index.html"
                         class="font-extrabold text-blue-600 text-xl">HVACCalc</a></div>
-                <div class="hidden md:flex space-x-8"><a href="../index.html" class="text-slate-600">Calculator</a><a
-                        href="../blog.html" class="text-blue-600 font-bold">Blog</a></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Calculator</a>
+                    <a href="../blog.html" class="text-blue-600 font-bold">Blog</a>
+                    <a href="../faq.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
-    <article class="max-w-3xl mx-auto px-4 py-12">
-        <a href="../blog.html" class="text-blue-600 mb-4 inline-block">&larr; Back to Blog</a>
-        <h1 class="text-4xl font-extrabold mb-6">Air Leakage, ACH, and HVAC Load: What Manual J Accounts For</h1>
-        <img src="../assets/images/cluster-structure.png" alt="Air Leakage" class="w-full rounded-2xl shadow-lg mb-8">
-        <div class="prose prose-lg prose-slate mx-auto">
-            <p class="lead">Infiltration is the invisible load. <strong>Air leakage</strong> can account for 30% of your
-                heating bill.</p>
 
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                <p class="font-bold text-blue-900">Account for leakage:</p>
-                <a href="../index.html" class="text-blue-600 font-bold underline">Start your Load Calculation</a>.
-            </div>
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
 
-            <h2>What is ACH?</h2>
-            <p>Air Changes per Hour (ACH) measures how "tight" your home is. New homes are sealed tight; old homes are
-                drafty.</p>
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Air Leakage, ACH, and HVAC
+                Load: What Manual J Accounts For</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">It's the "Invisible Load." Learn why a
+                drafty home requires a significantly larger HVAC system than a tight one.</p>
+        </header>
 
-            <p>If you need a blower door test, consider <a href="hiring-hvac-pro.html"
-                    class="text-blue-600 underline">hiring a professional</a>.</p>
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                You can buy the most efficient windows and the thickest insulation, but if your house is full of holes,
+                you're losing the battle.
+            </p>
 
-            <div class="bg-slate-900 text-white p-8 rounded-2xl text-center mt-12">
-                <h3 class="text-2xl font-bold mb-4">Calculate Total Load</h3>
+            <p>
+                <strong>Air leakage hvac load</strong> accounts for the unconditioned air that sneaks into your home
+                through cracks, gaps, and vents. In older homes, this "Infiltration" can make up 30-40% of the heating
+                and cooling bill.
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Rate Your Draftiness</h3>
+                <p class="text-blue-800 mb-4">Our calculator allows you to select "Tight," "Average," or "Leaky" to
+                    adjust the calculation accordingly.</p>
                 <a href="../index.html"
-                    class="inline-block px-8 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700">Start Now</a>
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Start
+                    Calculation &rarr;</a>
             </div>
+
+            <h2>What is Infiltration?</h2>
+            <p>
+                Infiltration is outside air entering the house uncontrolled. It happens due to two forces:
+            </p>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li><strong>Wind Pressure:</strong> Wind blowing against the house forces air into cracks on one side
+                    and sucks it out the other.</li>
+                <li><strong>Stack Effect:</strong> In winter, warm air rises and escapes through the attic
+                    (exfiltration), sucking cold air in from the basement/crawlspace (infiltration) to replace it.</li>
+            </ol>
+
+            <h2>Understanding ACH (Air Changes per Hour)</h2>
+            <p>
+                Engineers measure <strong>ach hvac calculation</strong> factors to quantify leakiness.
+            </p>
+            <p>
+                <strong>Definition:</strong> 1 ACH means the entire volume of air in your house is replaced by outside
+                air once every hour.
+            </p>
+            <ul class="list-disc pl-6">
+                <li><strong>Old/Leaky House:</strong> 0.75 to 1.5 ACH (The air changes 18-24 times a day!).</li>
+                <li><strong>Average Home:</strong> 0.40 to 0.50 ACH.</li>
+                <li><strong>Tight/New Home:</strong> 0.20 to 0.35 ACH.</li>
+            </ul>
+
+            <h2>Latent Load: The Humidity Nightmare</h2>
+            <p>
+                <strong>Infiltration cooling load</strong> isn't just about temperature (Sensible Load). In humid
+                climates, that outside air brings gallons of water vapor with it.
+            </p>
+            <p>
+                Your air conditioner has to work double-duty: first to remove the humidity (Latent), then to cool the
+                air. If you have high air leakage, your AC might spend 50% of its energy just fighting the humidity
+                coming through the cracks.
+            </p>
+
+            <h2>Duct Leakage: The Silent Killer</h2>
+            <p>
+                <strong>Duct leakage hvac load</strong> is often calculated separately, but it's related.
+                <br>
+                If your ducts are in a hot attic (140°F) and they leak even 10% of the air, you are:
+            </p>
+            <ol class="list-decimal pl-6 space-y-2">
+                <li>Pumping expensive cold air into the attic.</li>
+                <li>Sucking dusty, hot attic insulation fiberglass into your home (Negative pressure).</li>
+            </ol>
+            <p>
+                This is why <strong>manual j infiltration</strong> calculations ask heavily about duct location. Keeping
+                ducts inside the "conditioned space" (like dropped ceilings) is vastly more efficient than attics.
+            </p>
+
+            <h2>Air Sealing > Bigger AC</h2>
+            <p>
+                If your home is leaky, the solution isn't to buy a bigger unit to "overpower" the drafts. The solution
+                is <strong>air sealing hvac sizing</strong> reduction.
+            </p>
+            <p>
+                Spending $500 on caulk, foam, and weatherstripping can often lower your load requirement by 0.5
+                Tons—saving you $1,500 on the equipment cost.
+            </p>
+
+            <h2>How to Measure It Properly</h2>
+            <p>
+                To get a truly accurate number, professionals use a "Blower Door Test." They put a big fan in your door,
+                depressurize the house, and measure exactly how much air leaks in.
+            </p>
+            <p>
+                <a href="hiring-hvac-pro.html" class="text-blue-600 font-bold hover:underline">Read Next: When You
+                    Should Hire a Pro for a Blower Door/Manual J test &rarr;</a>
+            </p>
+
+            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Estimate Your Leakage</h3>
+                <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Not sure if your home is Tight or Leaky? Use our
+                    tool to see how it affects your tonnage.</p>
+                <a href="../index.html"
+                    class="inline-block px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">Run
+                    Scenarios</a>
+            </div>
+
         </div>
     </article>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500">&copy; 2026 HVACCalc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

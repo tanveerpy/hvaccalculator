@@ -4,53 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Calculate HVAC Load for a House | HVACCalc</title>
+    <title>How to Calculate HVAC Load for a House (Manual J Step-by-Step) | HVACCalc</title>
+    <meta name="description"
+        content="Learn how to calculate HVAC load for your home using the Manual J method. A step-by-step guide with examples for residential heating and cooling calculations.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="../assets/js/theme-config.js"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
 <body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center"><a href="../index.html"
                         class="font-extrabold text-blue-600 text-xl">HVACCalc</a></div>
-                <div class="hidden md:flex space-x-8"><a href="../index.html" class="text-slate-600">Calculator</a><a
-                        href="../blog.html" class="text-blue-600 font-bold">Blog</a></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Calculator</a>
+                    <a href="../blog.html" class="text-blue-600 font-bold">Blog</a>
+                    <a href="../faq.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
-    <article class="max-w-3xl mx-auto px-4 py-12">
-        <a href="../blog.html" class="text-blue-600 mb-4 inline-block">&larr; Back to Blog</a>
-        <h1 class="text-4xl font-extrabold mb-6">How to Calculate HVAC Load for a House</h1>
-        <img src="../assets/images/cluster-calculator.png" alt="Calculating HVAC Load"
-            class="w-full rounded-2xl shadow-lg mb-8">
-        <div class="prose prose-lg prose-slate mx-auto">
-            <p class="lead">Want to know <strong>how to calculate HVAC load</strong>? This guide walks you through the
-                Manual J method step-by-step.</p>
 
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                <p class="font-bold text-blue-900">Skip the math:</p>
-                <a href="../index.html" class="text-blue-600 font-bold underline">Use our Free Manual J Load
-                    Calculator</a> to get instant results.
-            </div>
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
 
-            <h2>Step 1: Measure Your Area</h2>
-            <p>Total square footage is the base. <a href="how-many-btus.html" class="text-blue-600 underline">Check our
-                    BTU guide</a> for more details.</p>
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">How to Calculate HVAC Load
+                for a House (Manual J Step-by-Step)</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">A complete guide to understanding the
+                math behind residential heating and cooling sizing.</p>
+        </header>
 
-            <div class="bg-slate-900 text-white p-8 rounded-2xl text-center mt-12">
-                <h3 class="text-2xl font-bold mb-4">Try the Calculator</h3>
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                Want to know exactly what size air conditioner or furnace your home needs? Learning <strong>how to
+                    calculate hvac load manual j</strong> style is the only accurate way to find out.
+            </p>
+
+            <p>
+                While professional software automates this process (and we highly recommend using our free tool),
+                understanding the underlying math gives you a massive advantage when talking to contractors. It prevents
+                you from being sold oversized equipment based on lazy "Rule of Thumb" estimates.
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Skip the Hand Math</h3>
+                <p class="text-blue-800 mb-4">Our automated tool performs all these physics calculations instantly based
+                    on your local climate data.</p>
                 <a href="../index.html"
-                    class="inline-block px-8 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700">Calculate Now</a>
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Start
+                    Free Calculation &rarr;</a>
             </div>
+
+            <h2>The Basic Formula: Heat Loss/Gain</h2>
+            <p>
+                At its core, a <strong>residential hvac load calculation</strong> is figuring out how fast heat enters
+                your home in summer (Heat Gain) or leaves it in winter (Heat Loss).
+            </p>
+            <p>
+                The fundamental physics formula used in the <strong>Manual J method</strong> is:
+            </p>
+            <div class="bg-slate-900 text-white p-6 rounded-xl text-center font-mono my-6">
+                HTM (Heat Transfer Multiplier) &times; Area = BTU Loss/Gain
+            </div>
+            <p>
+                Where HTM is a combination of:
+                <br>
+                <strong>U-Value</strong> (Insulation Efficiency) &times; <strong>Temperature Difference</strong>
+                (Outside vs Inside)
+            </p>
+
+            <h2>Step-by-Step: Manual J Calculation Example</h2>
+            <p>
+                Let's walk through a simplified <strong>manual j calculation example</strong> for a single room to show
+                how rigorous this process is.
+            </p>
+            <p>
+                <strong>Scenario:</strong> A 15x20 living room (300 sq ft) in Chicago.
+                <br>
+                <strong>Wall:</strong> Exterior wall is 20ft long, 8ft high (160 sq ft). Insulation is R-13.
+                <br>
+                <strong>Window:</strong> One big 6x5 window (30 sq ft), double pane.
+            </p>
+
+            <h3>Step 1: Calculate Wall Load</h3>
+            <ul class="list-disc pl-6">
+                <li><strong>Net Wall Area:</strong> 160 sq ft (total) - 30 sq ft (window) = 130 sq ft.</li>
+                <li><strong>U-Value (R-13):</strong> Approx 0.076.</li>
+                <li><strong>Temp Difference (Winter):</strong> Inside 70°F, Outside 0°F = 70° difference.</li>
+                <li><strong>Math:</strong> 130 &times; 0.076 &times; 70 = <strong>691 BTUs/hr</strong> heat loss through
+                    the wall.</li>
+            </ul>
+
+            <h3>Step 2: Calculate Window Load</h3>
+            <ul class="list-disc pl-6">
+                <li><strong>Area:</strong> 30 sq ft.</li>
+                <li><strong>U-Value (Double Pane):</strong> Approx 0.50.</li>
+                <li><strong>Temp Difference:</strong> 70°.</li>
+                <li><strong>Math:</strong> 30 &times; 0.50 &times; 70 = <strong>1,050 BTUs/hr</strong> heat loss through
+                    the window.</li>
+            </ul>
+            <p>
+                <em>Notice that the window loses more heat than the entire wall, despite being 4x smaller! This is why
+                    window quality matters.</em>
+            </p>
+
+            <h3>Step 3: Infiltration (Air Leakage)</h3>
+            <p>
+                Cold air leaking in through cracks requires massive energy to heat. Manual J assigns an "ACH" (Air
+                Changes per Hour) factor. For an average Chicago home, this might add another <strong>1,500
+                    BTUs</strong> just for this one room.
+            </p>
+
+            <h3>Step 4: Total & Repeat</h3>
+            <p>
+                Total room load = 691 + 1050 + 1500 = <strong>3,241 BTUs/hr</strong>.
+            </p>
+            <p>
+                To <strong>calculate heating and cooling load</strong> for the whole house, you repeat this for every
+                single wall, ceiling, floor, and window in every room. Then, for cooling, you add "Solar Gain" (sun heat
+                through glass) and "Internal Gains" (heat from people/appliances).
+            </p>
+
+            <h2>Why You Need an HVAC Load Calculator for Home Use</h2>
+            <p>
+                As you can see, doing this by hand for a whole house involves hundreds of calculations. You need to look
+                up U-values for different insulation types, find the SHGC for your glass, and know the specific "Design
+                Temperatures" for your city (Chicago is different from Miami).
+            </p>
+            <p>
+                Using a dedicated <strong>hvac load calculator for home</strong> automates these lookups. It ensures you
+                don't use a "Winter Design Temp" of 30°F when it actually drops to -5°F in your area.
+            </p>
+
+            <h2>Common Mistakes to Avoid</h2>
+            <ul class="list-decimal pl-6 space-y-4">
+                <li>
+                    <strong>Ignoring Orientation:</strong> In cooling mode, a West-facing window gains 3x more heat than
+                    a North-facing one. Simple calculators often miss this.
+                </li>
+                <li>
+                    <strong>Guessing Insulation:</strong> An uninsulated wall (R-4) loses heat 4x faster than an
+                    insulated one (R-19). Guessing wrong here ruins the calculation.
+                </li>
+                <li>
+                    <strong>Overlooking Ducts:</strong> If your ducts are in a hot attic, you can lose 30% of your
+                    cooling capacity before it even reaches the rooms.
+                </li>
+            </ul>
+
+            <h2>What About BTUs per Square Foot?</h2>
+            <p>
+                Many people ask, "Can't I just say 20 BTUs per square foot?" This is the "Rule of Thumb" approach, and
+                it is almost always wrong. We break down why simply multiplying area by a random number fails in our
+                detailed guide on BTUs.
+            </p>
+            <p>
+                <a href="how-many-btus.html" class="text-blue-600 font-bold hover:underline">Read Next: How Many BTUs Do
+                    I Need? &rarr;</a>
+            </p>
+
+            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Let Us Do The Math For You</h3>
+                <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Our algorithm processes wall areas, insulation
+                    values, and local climate data instantly.</p>
+                <a href="../index.html"
+                    class="inline-block px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">Start
+                    Your Calculation</a>
+            </div>
+
         </div>
     </article>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500">&copy; 2026 HVACCalc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

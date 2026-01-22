@@ -5,51 +5,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How Many BTUs Do I Need for My House? | HVACCalc</title>
+    <meta name="description"
+        content="Wondering how many BTUs you need for your house? Stop guessing with square footage rules. Get an accurate HVAC sizing guide based on Manual J standards.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="../assets/js/theme-config.js"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
 <body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center"><a href="../index.html"
                         class="font-extrabold text-blue-600 text-xl">HVACCalc</a></div>
-                <div class="hidden md:flex space-x-8"><a href="../index.html" class="text-slate-600">Calculator</a><a
-                        href="../blog.html" class="text-blue-600 font-bold">Blog</a></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Calculator</a>
+                    <a href="../blog.html" class="text-blue-600 font-bold">Blog</a>
+                    <a href="../faq.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
-    <article class="max-w-3xl mx-auto px-4 py-12">
-        <a href="../blog.html" class="text-blue-600 mb-4 inline-block">&larr; Back to Blog</a>
-        <h1 class="text-4xl font-extrabold mb-6">How Many BTUs Do I Need for My House?</h1>
-        <img src="../assets/images/cluster-calculator.png" alt="BTU Calculation"
-            class="w-full rounded-2xl shadow-lg mb-8">
-        <div class="prose prose-lg prose-slate mx-auto">
-            <p class="lead">Asking "how many BTUs do I need?" is the first step to comfort. But estimates often get it
-                wrong.</p>
 
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                <p class="font-bold text-blue-900">Find your exact BTU number:</p>
-                <a href="../index.html" class="text-blue-600 font-bold underline">Run the Manual J Load Calculator</a>.
-            </div>
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
 
-            <h2>BTUs vs Tonnage</h2>
-            <p>12,000 BTUs = 1 Ton. Learn more in our <a href="hvac-tonnage-explained.html"
-                    class="text-blue-600 underline">Tonnage Explained guide</a>.</p>
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">How Many BTUs Do I Need
+                for My House?</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">Square footage is just the starting
+                point. Discover the real math behind correct system sizing.</p>
+        </header>
 
-            <div class="bg-slate-900 text-white p-8 rounded-2xl text-center mt-12">
-                <h3 class="text-2xl font-bold mb-4">Calculate Your BTUs</h3>
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                One of the most common questions homeowners ask before replacing an AC unit or furnace is: <strong>"How
+                    many BTUs do I need for my house?"</strong>
+            </p>
+
+            <p>
+                If you ask a lazy contractor or search generic charts online, you'll likely get a simple answer based on
+                square footage. They might say, "You have 2,000 sq ft? You need 4 Tons (48,000 BTUs)."
+            </p>
+            <p>
+                <strong>This answer is almost certainly wrong.</strong> In fact, following it could cost you thousands
+                in energy bills and comfort problems. Today, we'll explain why <strong>heating and cooling btu
+                    calculation</strong> is about thermal performance, not just floor area.
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Get Your Exact Number</h3>
+                <p class="text-blue-800 mb-4">Don't guess with charts. Our <strong>hvac btu calculator</strong> uses
+                    your specific insulation and climate data.</p>
                 <a href="../index.html"
-                    class="inline-block px-8 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700">Start Now</a>
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Run
+                    Free Calculation &rarr;</a>
             </div>
+
+            <h2>What is a BTU in HVAC?</h2>
+            <p>
+                BTU stands for <strong>British Thermal Unit</strong>. It is a measure of heat energy.
+            </p>
+            <ul class="list-disc pl-6">
+                <li><strong>Cooling:</strong> 1 BTU refers to the amount of heat the AC <em>removes</em> from your home.
+                </li>
+                <li><strong>Heating:</strong> 1 BTU refers to the amount of heat the furnace <em>adds</em> to your home.
+                </li>
+            </ul>
+            <p>
+                You'll often see equipment rated in "Tons." This is just a shorthand for BTUs. 1 Ton = 12,000 BTUs/hr.
+                So a 3-Ton AC unit moves 36,000 BTUs of heat per hour.
+            </p>
+
+            <h2>The "Rule of Thumb" vs. Reality</h2>
+            <p>
+                The old rule was roughly "1 Ton for every 500 square feet."
+                <br>
+                For a 2,000 sq ft home: 2000 / 500 = 4 Tons (48,000 BTUs).
+            </p>
+            <p>
+                However, this rule was created decades ago when homes had single-pane windows and no insulation.
+            </p>
+            <p>
+                <strong>The Modern Reality:</strong> A 2,000 sq ft home built today with double-pane low-E windows, R-50
+                attic insulation, and tight air sealing might only need <strong>24,000 BTUs (2 Tons)</strong>.
+            </p>
+            <p>
+                If you installed the "Rule of Thumb" 4-Ton unit in that modern house, it would be <strong>200%
+                    oversized</strong>. It would turn on, cool the house in 5 minutes, and shut off before removing any
+                humidity.
+            </p>
+
+            <h2>5 Factors That Change Your BTU Requirements</h2>
+            <p>
+                Any accurate <strong>btu load calculator home</strong> tools must account for these five variables:
+            </p>
+
+            <h3>1. Climate Zone (The Delta T)</h3>
+            <p>
+                Heating a home in Minneapolis (Design Temp -15°F) requires far more BTUs than heating the same home in
+                Atlanta (Design Temp 25°F).
+            </p>
+
+            <h3>2. Ceiling Height</h3>
+            <p>
+                Heat rises. A home with 20-foot vaunted ceilings has double the volume of air to condition compared to a
+                home with standard 8-foot ceilings, even if the floor square footage is the same.
+            </p>
+
+            <h3>3. Insulation Quality</h3>
+            <p>
+                This is the biggest factor. Going from R-11 (poor) to R-38 (good) in your attic can reduce your
+                <strong>furnace btu calculator</strong> result by 30% or more.
+            </p>
+
+            <h3>4. Window Direction</h3>
+            <p>
+                In the summer, West-facing windows act like heaters. If your home has a wall of glass facing the sunset,
+                you might need an extra half-ton of cooling capacity just for that one room.
+            </p>
+
+            <h3>5. Occupancy</h3>
+            <p>
+                Human bodies generate heat (about 230-400 BTUs/hr each). If you frequently host parties with 20 people,
+                your cooling load spikes.
+            </p>
+
+            <h2>Rough Estimates by Region (Use with Caution!)</h2>
+            <p>
+                While we always recommend a full calculation, here are some broad ranges for modern "Average" homes to
+                show how variable <strong>hvac sizing btu</strong> can be:
+            </p>
+            <div class="overflow-x-auto my-6">
+                <table class="min-w-full bg-white border border-slate-200">
+                    <thead class="bg-slate-100">
+                        <tr>
+                            <th class="py-3 px-4 border-b text-left">Region</th>
+                            <th class="py-3 px-4 border-b text-left">Cooling Load Estimate</th>
+                            <th class="py-3 px-4 border-b text-left">Heating Load Estimate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Hot/Dry (Arizona)</td>
+                            <td class="py-3 px-4 border-b">1 Ton per 450-600 sq ft</td>
+                            <td class="py-3 px-4 border-b">Low</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">Humid South (Florida)</td>
+                            <td class="py-3 px-4 border-b">1 Ton per 500-700 sq ft</td>
+                            <td class="py-3 px-4 border-b">Very Low</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 border-b">North (Chicago/NY)</td>
+                            <td class="py-3 px-4 border-b">1 Ton per 700-1000 sq ft</td>
+                            <td class="py-3 px-4 border-b">High (40-50 BTU/sq ft)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-slate-500 italic mb-8">
+                *Note: These are estimates. A tightly insulated home in Chicago might only need 1 Ton per 1200 sq ft for
+                cooling!
+            </p>
+
+            <h2>Turning BTUs into Tons</h2>
+            <p>
+                Once you know your BTU requirement (e.g., 34,000 BTUs), how do you buy a system? You convert it to
+                Tonnage. This step is crucial because systems come in half-ton increments (2.0, 2.5, 3.0).
+            </p>
+            <p>
+                <a href="hvac-tonnage-explained.html" class="text-blue-600 font-bold hover:underline">Read Next: HVAC
+                    Tonnage Explained (Converting Manual J to Systems) &rarr;</a>
+            </p>
+
+            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center">
+                <h3 class="text-2xl font-bold mb-4">Stop Guessing. Calculate.</h3>
+                <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Get the exact BTU requirement for your specific
+                    home layout and insulation.</p>
+                <a href="../index.html"
+                    class="inline-block px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">Start
+                    Free Calculation</a>
+            </div>
+
         </div>
     </article>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500">&copy; 2026 HVACCalc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

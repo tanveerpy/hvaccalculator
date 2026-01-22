@@ -4,54 +4,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Insulation Affects Heating and Cooling Load | HVACCalc</title>
+    <title>How Insulation Affects HVAC Load (Calculating R-Values) | HVACCalc</title>
+    <meta name="description"
+        content="Does asking insulation lower your HVAC size? Learn how R-values impact Manual J calculations and how upgrading insulation can save you money on equipment.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="../assets/js/theme-config.js"></script>
     <style>
         body {
-            font-family: 'Inter', sans-serif
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 
 <body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
     <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center"><a href="../index.html"
                         class="font-extrabold text-blue-600 text-xl">HVACCalc</a></div>
-                <div class="hidden md:flex space-x-8"><a href="../index.html" class="text-slate-600">Calculator</a><a
-                        href="../blog.html" class="text-blue-600 font-bold">Blog</a></div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Calculator</a>
+                    <a href="../blog.html" class="text-blue-600 font-bold">Blog</a>
+                    <a href="../faq.html"
+                        class="text-slate-600 hover:text-blue-600 transition-colors font-medium">FAQ</a>
+                </div>
             </div>
         </div>
     </nav>
-    <article class="max-w-3xl mx-auto px-4 py-12">
-        <a href="../blog.html" class="text-blue-600 mb-4 inline-block">&larr; Back to Blog</a>
-        <h1 class="text-4xl font-extrabold mb-6">How Insulation Affects Heating and Cooling Load</h1>
-        <img src="../assets/images/cluster-structure.png" alt="Insulation Impact"
-            class="w-full rounded-2xl shadow-lg mb-8">
-        <div class="prose prose-lg prose-slate mx-auto">
-            <p class="lead">Upgrading your insulation is often cheaper than buying a bigger AC. Learn <strong>how
-                    insulation affects HVAC load</strong>.</p>
 
-            <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 my-6">
-                <p class="font-bold text-blue-900">Test different R-values:</p>
-                <a href="../index.html" class="text-blue-600 font-bold underline">Use our Calculator's "Advanced
-                    Details" section</a> to see the difference.
-            </div>
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
 
-            <h2>R-Value Explained</h2>
-            <p>Higher R-values resist heat flow. This acts similarly to high-performance <a href="windows-impact.html"
-                    class="text-blue-600 underline">windows</a> in keeping heat out.</p>
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">How Insulation Affects
+                Heating and Cooling Load</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">The secret to a smaller, cheaper air
+                conditioner might be in your attic. Here is the math behind insulation R-values.</p>
+        </header>
 
-            <div class="bg-slate-900 text-white p-8 rounded-2xl text-center mt-12">
-                <h3 class="text-2xl font-bold mb-4">See Your Savings</h3>
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                When people think about upgrading their comfort, they usually think about buying a new machine. "I need
+                a bigger AC," they say.
+            </p>
+
+            <p>
+                But in HVAC design, the equipment is just the engine. The house is the car body. If the car has holes in
+                it (poor insulation), it doesn't matter how big the engine is—you're going to lose performance.
+                Understanding <strong>how insulation affects hvac load</strong> is the key to downsizing your system and
+                saving thousands.
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Simulate an Insulation Upgrade</h3>
+                <p class="text-blue-800 mb-4">Run our calculator with "Poor" insulation, then run it again with "Good."
+                    You might be shocked at the difference.</p>
                 <a href="../index.html"
-                    class="inline-block px-8 py-3 bg-blue-600 rounded-xl font-bold hover:bg-blue-700">Calculate
-                    Impact</a>
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Run
+                    Scenarios Now &rarr;</a>
             </div>
+
+            <h2>What is R-Value?</h2>
+            <p>
+                <strong>Insulation R value hvac load</strong> calculations are based on thermal resistance.
+                <br>
+                <strong>R-Value</strong> measures how well a material stops heat from passing through it.
+            </p>
+            <ul class="list-disc pl-6">
+                <li><strong>R-1:</strong> Single pane of glass (Terrible).</li>
+                <li><strong>R-13:</strong> Standard 2x4 wall insulation.</li>
+                <li><strong>R-38:</strong> Standard modern attic insulation (about 12-14 inches of fiberglass).</li>
+            </ul>
+            <p>
+                The higher the number, the harder it is for heat to enter in summer or leave in winter.
+            </p>
+
+            <h2>The Attic: Your Biggest Opportunity</h2>
+            <p>
+                The sun beats down on your roof all day. In summer, attic temperatures can reach 140°F. If you have thin
+                <strong>attic insulation cooling load</strong> spikes massively because that 140°F heat radiates right
+                through your ceiling drywall into your living room.
+            </p>
+            <p>
+                <strong>Scenario:</strong> Upgrading from R-11 (3 inches of old fluff) to R-49 (blow-in cellulose) in a
+                2,000 sq ft house.
+                <br>
+                <em>Result: You could reduce your cooling load by ~6,000 BTUs (half a ton).</em>
+            </p>
+
+            <h2>Walls and "Thermal Bridging"</h2>
+            <p>
+                <strong>Wall insulation heating load</strong> impact is significant in cold climates. An uninsulated 2x4
+                wall acts like a radiator sucking heat out of your house.
+            </p>
+            <p>
+                Even if you have insulation, the wood studs themselves conduct heat (thermal bridging). Manual J takes
+                this into account, giving a "weighted average" U-value for the whole wall assembly.
+            </p>
+
+            <h2>Can Adding Insulation Reduce HVAC Size?</h2>
+            <p>
+                <strong>Yes.</strong> This is the smartest financial move you can make.
+            </p>
+            <p>
+                Let's say you need a new AC. Your Manual J says you need 3.5 Tons.
+                <br>
+                A 3.5 Ton system costs ~$8,000.
+            </p>
+            <p>
+                If you spend $1,500 <strong>reduce hvac size with insulation</strong> upgrades in the attic first, you
+                might drop your load to 2.8 Tons. Now you can install a 3.0 Ton unit.
+            </p>
+            <p>
+                You save money on the equipment, and you save money on electric bills every single month forever.
+            </p>
+
+            <h2>What About Windows?</h2>
+            <p>
+                Insulation stops heat transfer through solid surfaces (conduction). But glass is different—it lets solar
+                radiation pass right through it.
+            </p>
+            <p>
+                <a href="windows-impact.html" class="text-blue-600 font-bold hover:underline">Read Next: How Windows
+                    Affect HVAC Load (SHGC & Orientation) &rarr;</a>
+            </p>
+
+            <div class="mt-12 p-8 bg-slate-100 rounded-2xl border border-slate-200 text-center">
+                <h3 class="text-2xl font-bold mb-4 text-slate-800">Check Your Home's Efficiency</h3>
+                <p class="text-slate-600 mb-6">Input your insulation levels into our calculator to see if your current
+                    system is oversized.</p>
+                <a href="../index.html"
+                    class="inline-block px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg">Start
+                    Calculation</a>
+            </div>
+
         </div>
     </article>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-24 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500">&copy; 2026 HVACCalc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
