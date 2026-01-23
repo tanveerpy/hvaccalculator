@@ -108,4 +108,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://writeoffcalc.com/articles/hvac-load-calculation-checklist.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://writeoffcalc.com/articles/do-i-need-manual-j-replacement.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://writeoffcalc.com/articles/prepare-home-for-manual-j.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://writeoffcalc.com/articles/manual-j-apartments-condos.html</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
