@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HVAC Load Calculation Terms Explained (BTU, SHGC, ACH) | HVACCalc</title>
+    <meta
+        content="Confused by HVAC jargon? We define the essential terms you need to know: BTU, Ton, SEER, SHGC, and ACH."
+        name="description" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../assets/js/theme-config.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link href="https://writeoffcalc.com/articles/hvac-load-calculation-terms.html" rel="canonical" />
+</head>
+
+<body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a class="flex items-center group" href="../index.html">
+                        <span
+                            class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span
+                                class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
+                    </a>
+                </div>
+                <!-- Main Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../index.html">Calculator</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../blog.html">Blog</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../about.html">About</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1" href="../blog.html">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
+
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">HVAC Load Calculation
+                Terms Explained</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">Don't let contractors dazzle you with
+                jargon. Here is your cheat sheet.</p>
+        </header>
+
+        <div class="h-64 md:h-96 w-full relative overflow-hidden rounded-2xl shadow-xl mb-12 border border-slate-100">
+            <img alt="HVAC Terminology Word Cloud" class="w-full h-full object-cover" height="800"
+                src="../assets/images/hvac-load-calculation-glossary.webp" width="1200" />
+        </div>
+
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                To understand a <a href="manual-j-basics.html" class="text-blue-600 hover:underline">Manual J
+                    calculation</a>, you need to speak the language.
+            </p>
+
+            <h2>The Big Three</h2>
+
+            <div class="space-y-6 my-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="text-slate-900 font-bold mt-0">BTU (British Thermal Unit)</h3>
+                    <p class="text-sm text-slate-600 mb-0">The amount of energy needed to heat or cool one pound of
+                        water by 1°F. It is the core unit of heat.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="text-slate-900 font-bold mt-0">Ton (Tonnage)</h3>
+                    <p class="text-sm text-slate-600 mb-0">12,000 BTUs/hour. Historically, the cooling power of melting
+                        one ton of ice in 24 hours.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                    <h3 class="text-slate-900 font-bold mt-0">Manual J</h3>
+                    <p class="text-sm text-slate-600 mb-0">The protocol developed by ACCA (Air Conditioning Contractors
+                        of America) to calculate heat loss and gain.</p>
+                </div>
+            </div>
+
+            <h2>Advanced Terms</h2>
+
+            <h3>SHGC (Solar Heat Gain Coefficient)</h3>
+            <p>
+                A number between 0 and 1 that measures how much solar heat comes through a window. Lower is better for
+                cooling climates.
+            </p>
+
+            <h3>Latent Load vs Sensible Load</h3>
+            <p>
+                As explained in our <a href="humidity-cooling-load.html" class="text-blue-600 hover:underline">Humidity
+                    article</a>:
+            </p>
+            <ul class="list-disc pl-6">
+                <li><strong>Sensible:</strong> Temperature change (Thermometer).</li>
+                <li><strong>Latent:</strong> Moisture removal (Humidity).</li>
+            </ul>
+
+            <h3>ACH (Air Changes per Hour)</h3>
+            <p>
+                A measure of leakage. If your home has 0.5 ACH, half the air in your house leaks out and is replaced
+                every hour.
+            </p>
+
+            <div class="mt-12 p-8 bg-blue-600 rounded-2xl text-white text-center shadow-2xl">
+                <h3 class="text-3xl font-bold mb-4">Fluency Check</h3>
+                <p class="text-blue-100 text-lg mb-8 max-w-xl mx-auto">Now that you know the terms, use the tool that
+                    pro's use.</p>
+                <a class="inline-block px-8 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+                    href="../index.html">Calculate Load</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer same as above -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+            <div class="text-center md:text-left">
+                <a class="inline-block mb-4" href="../index.html">
+                    <span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span
+                            class="text-white">Calc</span></span>
+                </a>
+                <p class="text-sm text-slate-500">Professional-grade Manual J load calculations.</p>
+                <p class="text-xs text-slate-600 mt-2">© 2026 HVAC Load Calculator.</p>
+            </div>
+            <div class="flex flex-col items-center space-y-3">
+                <a class="hover:text-white transition" href="../index.html">Home</a>
+                <a class="hover:text-white transition" href="../blog.html">Blog</a>
+                <a class="hover:text-white transition" href="../privacy.html">Privacy Policy</a>
+                <a class="hover:text-white transition" href="../contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
