@@ -1,230 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVAC Tonnage Explained: Manual J to System Size | HVACCalc</title>
-    <meta name="description"
-        content="What does 'Ton' mean in HVAC? Learn how to convert Manual J BTUs to tons, use our HVAC tonnage calculator logic, and select the right system size.">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="../assets/js/theme-config.js"></script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HVAC Tonnage Explained: Manual J to System Size | HVACCalc</title>
+<meta content="What does 'Ton' mean in HVAC? Learn how to convert Manual J BTUs to tons, use our HVAC tonnage calculator logic, and select the right system size." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="../assets/js/theme-config.js"></script>
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
     </style>
-</head>
-
+<link href="https://hvac-manual-j-calculator.netlify.app/articles/hvac-tonnage-explained.html" rel="canonical"/></head>
 <body class="bg-gray-50 text-slate-900">
-    <!-- Header -->
-            <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="../index.html" class="flex items-center group">
-                        <span class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
-                    </a>
-                </div>
-
-                <!-- Main Nav -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Calculator</a>
-                    <a href="../blog.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Blog</a>
-                    <a href="../about.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">About</a>
-                    <a href="../contact.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <article class="max-w-4xl mx-auto px-4 py-12">
-        <div class="mb-8">
-            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                </svg>
+<!-- Header -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<!-- Logo -->
+<div class="flex items-center">
+<a class="flex items-center group" href="../index.html">
+<span class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
+</a>
+</div>
+<!-- Main Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../index.html">Calculator</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../blog.html">Blog</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../about.html">About</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../contact.html">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+<article class="max-w-4xl mx-auto px-4 py-12">
+<div class="mb-8">
+<a class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1" href="../blog.html">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
                 Back to Blog
             </a>
-        </div>
-
-        <header class="mb-10 text-center">
-            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">HVAC Tonnage Explained:
+</div>
+<header class="mb-10 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">HVAC Tonnage Explained:
                 Converting Manual J BTUs to System Size</h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">It's not about how much the unit weighs.
+<p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">It's not about how much the unit weighs.
                 Here is the simple math to convert your Manual J results into equipment size.</p>
-        </header>
-
-        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
-            <p class="lead text-xl text-slate-700 font-medium">
+</header>
+<div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+<p class="lead text-xl text-slate-700 font-medium">
                 You've run your load calculation and got a number: <strong>28,500 BTUs</strong>. But when you go to buy
                 an air conditioner, you see them sold in "Tons"—1.5 Ton, 2.0 Ton, 3.0 Ton.
             </p>
-
-            <p>
+<p>
                 How do you translate one to the other? And why do we use such a weird unit of measurement for cooling
                 air? This guide serves as your <strong>hvac tonnage calculator</strong> and conversion manual.
             </p>
-
-            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
-                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Need your base number first?</h3>
-                <p class="text-blue-800 mb-4">You can't calculate tonnage until you know your BTU load. Use our free
+<div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+<h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Need your base number first?</h3>
+<p class="text-blue-800 mb-4">You can't calculate tonnage until you know your BTU load. Use our free
                     tool to get that number first.</p>
-                <a href="../index.html"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Calculate
-                    BTUs Here &rarr;</a>
-            </div>
-
-            <h2>What is a "Ton" of Cooling?</h2>
-            <p>
+<a class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline" href="../index.html">Calculate
+                    BTUs Here →</a>
+</div>
+<h2>What is a "Ton" of Cooling?</h2>
+<p>
                 First, let's clear up a common myth: <strong>HVAC Tonnage has nothing to do with the physical weight of
                     the equipment.</strong> A 3-ton unit does not weigh 6,000 lbs.
             </p>
-            <p>
+<p>
                 The term dates back to the 19th century, before mechanical air conditioning existed. Buildings were
                 cooled using giant blocks of ice harvested from frozen lakes in winter.
             </p>
-            <p>
-                <strong>The definition:</strong> A "Ton" of cooling is the amount of heat required to melt one ton
+<p>
+<strong>The definition:</strong> A "Ton" of cooling is the amount of heat required to melt one ton
                 (2,000 lbs) of ice over a 24-hour period.
             </p>
-            <p>
+<p>
                 The math works out to 288,000 BTUs per 24 hours, or exactly <strong>12,000 BTUs per hour</strong>.
             </p>
-
-            <h2>How to Convert BTU to Tons HVAC</h2>
-            <p>
+<h2>How to Convert BTU to Tons HVAC</h2>
+<p>
                 The formula to <strong>convert btu to tons hvac</strong> is incredibly simple:
             </p>
-            <div class="bg-slate-900 text-white p-6 rounded-xl text-center font-mono my-6 text-xl">
-                Manual J BTUs &div; 12,000 = Tonnage
+<div class="bg-slate-900 text-white p-6 rounded-xl text-center font-mono my-6 text-xl">
+                Manual J BTUs ÷ 12,000 = Tonnage
             </div>
-            <p>
-                <strong>Examples:</strong>
-            </p>
-            <ul class="list-disc pl-6">
-                <li>18,000 BTUs &div; 12,000 = <strong>1.5 Tons</strong></li>
-                <li>24,000 BTUs &div; 12,000 = <strong>2.0 Tons</strong></li>
-                <li>30,000 BTUs &div; 12,000 = <strong>2.5 Tons</strong></li>
-                <li>36,000 BTUs &div; 12,000 = <strong>3.0 Tons</strong></li>
-                <li>42,000 BTUs &div; 12,000 = <strong>3.5 Tons</strong></li>
-                <li>48,000 BTUs &div; 12,000 = <strong>4.0 Tons</strong></li>
-                <li>60,000 BTUs &div; 12,000 = <strong>5.0 Tons</strong></li>
-            </ul>
-
-            <h2>System Selection: Rounding Up or Down?</h2>
-            <p>
+<p>
+<strong>Examples:</strong>
+</p>
+<ul class="list-disc pl-6">
+<li>18,000 BTUs ÷ 12,000 = <strong>1.5 Tons</strong></li>
+<li>24,000 BTUs ÷ 12,000 = <strong>2.0 Tons</strong></li>
+<li>30,000 BTUs ÷ 12,000 = <strong>2.5 Tons</strong></li>
+<li>36,000 BTUs ÷ 12,000 = <strong>3.0 Tons</strong></li>
+<li>42,000 BTUs ÷ 12,000 = <strong>3.5 Tons</strong></li>
+<li>48,000 BTUs ÷ 12,000 = <strong>4.0 Tons</strong></li>
+<li>60,000 BTUs ÷ 12,000 = <strong>5.0 Tons</strong></li>
+</ul>
+<h2>System Selection: Rounding Up or Down?</h2>
+<p>
                 This is where <strong>hvac sizing tons</strong> gets tricky. Residential systems typically only come in
                 half-ton increments (1.5, 2.0, 2.5, etc.).
             </p>
-            <p>
-                <strong>Scenario:</strong> Your Manual J calculation comes back at <strong>26,000 BTUs</strong>. This is
+<p>
+<strong>Scenario:</strong> Your Manual J calculation comes back at <strong>26,000 BTUs</strong>. This is
                 right between a 2.0 Ton (24k) and a 2.5 Ton (30k) unit. Which do you choose?
             </p>
-
-            <h3>The Case for Rounding Down (Undersizing slightly)</h3>
-            <p>
+<h3>The Case for Rounding Down (Undersizing slightly)</h3>
+<p>
                 Many building science experts argue that if you are essentially right in the middle, or close to the
                 lower number, stick with the smaller unit (2.0 Tons in this case).
             </p>
-            <ul class="list-disc pl-6">
-                <li><strong>Better Humidity Control:</strong> It runs longer, pulling more moisture from the air.</li>
-                <li><strong>Quieter Operation:</strong> Less starting and stopping.</li>
-                <li><strong>Lower Cost:</strong> Smaller units are cheaper to buy and run.</li>
-            </ul>
-
-            <h3>The Case for Rounding Up (Safety Margin)</h3>
-            <p>
+<ul class="list-disc pl-6">
+<li><strong>Better Humidity Control:</strong> It runs longer, pulling more moisture from the air.</li>
+<li><strong>Quieter Operation:</strong> Less starting and stopping.</li>
+<li><strong>Lower Cost:</strong> Smaller units are cheaper to buy and run.</li>
+</ul>
+<h3>The Case for Rounding Up (Safety Margin)</h3>
+<p>
                 Most contractors will round up to the 2.5 Ton unit. This provides a safety net for extreme heat waves
                 (days hotter than the "Design Temperature"). However, this introduces the risk of short-cycling unless
                 the system is a <strong>variable-speed inverter</strong> unit.
             </p>
-
-            <h2>Sensible vs. Latent Capacity (The Advanced Part)</h2>
-            <p>
+<h2>Sensible vs. Latent Capacity (The Advanced Part)</h2>
+<p>
                 An <strong>air conditioner size calculator</strong> gives you the total load, but cooling is actually
                 two jobs:
             </p>
-            <ol class="list-decimal pl-6 space-y-2">
-                <li><strong>Sensible Cooling:</strong> Lowering the temperature (Thermometer change).</li>
-                <li><strong>Latent Cooling:</strong> Removing humidity (Water removal).</li>
-            </ol>
-            <p>
+<ol class="list-decimal pl-6 space-y-2">
+<li><strong>Sensible Cooling:</strong> Lowering the temperature (Thermometer change).</li>
+<li><strong>Latent Cooling:</strong> Removing humidity (Water removal).</li>
+</ol>
+<p>
                 A 3-Ton unit (36,000 BTUs) might provide 27,000 BTUs of sensible cooling and 9,000 BTUs of latent
                 cooling.
             </p>
-            <p>
-                <strong>Why this matters:</strong> If you live in a dry climate (Phoenix), you need high sensible
+<p>
+<strong>Why this matters:</strong> If you live in a dry climate (Phoenix), you need high sensible
                 capacity. If you live in a swampy climate (New Orleans), you need high latent capacity. Your contractor
                 should select equipment that matches your specific Sensible/Latent split, known as the "S/T Ratio."
             </p>
-
-            <h2>Why Oversizing is a Major Risk</h2>
-            <p>
+<h2>Why Oversizing is a Major Risk</h2>
+<p>
                 You might think, "I'll just get a 5-Ton unit for my 2-Ton house so it cools instantly!"
             </p>
-            <p>
+<p>
                 This is a disaster waiting to happen. Oversized units cool the air so fast that the thermostat shuts off
                 before the dehumidification process happens.
             </p>
-            <p>
-                <a href="oversizing-risks.html" class="text-blue-600 font-bold hover:underline">Read Next: Why
-                    Oversizing Your Air Conditioner Is a Costly Mistake &rarr;</a>
-            </p>
-
-            <div class="mt-12 p-8 bg-slate-100 rounded-2xl border border-slate-200 text-center">
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Ready to find your Tonnage?</h3>
-                <p class="text-slate-600 mb-6">Run our load calculator to get your exact BTU requirement, then use the
+<p>
+<a class="text-blue-600 font-bold hover:underline" href="oversizing-risks.html">Read Next: Why
+                    Oversizing Your Air Conditioner Is a Costly Mistake →</a>
+</p>
+<div class="mt-12 p-8 bg-slate-100 rounded-2xl border border-slate-200 text-center">
+<h3 class="text-2xl font-bold mb-4 text-slate-800">Ready to find your Tonnage?</h3>
+<p class="text-slate-600 mb-6">Run our load calculator to get your exact BTU requirement, then use the
                     math above to pick your system size.</p>
-                <a href="../index.html"
-                    class="inline-block px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg">Go
+<a class="inline-block px-8 py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg" href="../index.html">Go
                     to Calculator</a>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- Footer -->
-            <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
-            <!-- Col 1: Logo & Tagline -->
-            <div class="text-center md:text-left">
-                <a href="../index.html" class="inline-block mb-4">
-                    <span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span class="text-white">Calc</span></span>
-                </a>
-                <p class="text-sm text-slate-500">Professional-grade Manual J load calculations for homeowners and DIYers.</p>
-                <p class="text-xs text-slate-600 mt-2">&copy; 2026 HVAC Load Calculator.</p>
-            </div>
-
-            <!-- Col 2: Links (Centered) -->
-            <div class="flex flex-col items-center space-y-3">
-                <a href="../index.html" class="hover:text-white transition">Home</a>
-                <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                <a href="../privacy.html" class="hover:text-white transition">Privacy Policy</a>
-                <a href="../terms.html" class="hover:text-white transition">Terms of Service</a>
-                <a href="../contact.html" class="hover:text-white transition">Contact</a>
-            </div>
-
-            <!-- Col 3: Social Icons -->
-            <div class="flex justify-center md:justify-end space-x-6">
-                <!-- Twitter/X -->
-                <a href="#" class="text-slate-500 hover:text-blue-400 transition" aria-label="Twitter">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <!-- Facebook -->
-                <a href="#" class="text-slate-500 hover:text-blue-600 transition" aria-label="Facebook">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <!-- LinkedIn -->
-                <a href="#" class="text-slate-500 hover:text-blue-500 transition" aria-label="LinkedIn">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+</div>
+</div>
+</article>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+<!-- Col 1: Logo & Tagline -->
+<div class="text-center md:text-left">
+<a class="inline-block mb-4" href="../index.html">
+<span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span class="text-white">Calc</span></span>
+</a>
+<p class="text-sm text-slate-500">Professional-grade Manual J load calculations for homeowners and DIYers.</p>
+<p class="text-xs text-slate-600 mt-2">© 2026 HVAC Load Calculator.</p>
+</div>
+<!-- Col 2: Links (Centered) -->
+<div class="flex flex-col items-center space-y-3">
+<a class="hover:text-white transition" href="../index.html">Home</a>
+<a class="hover:text-white transition" href="../blog.html">Blog</a>
+<a class="hover:text-white transition" href="../privacy.html">Privacy Policy</a>
+<a class="hover:text-white transition" href="../terms.html">Terms of Service</a>
+<a class="hover:text-white transition" href="../contact.html">Contact</a>
+</div>
+<!-- Col 3: Social Icons -->
+<div class="flex justify-center md:justify-end space-x-6">
+<!-- Twitter/X -->
+<a aria-label="Twitter" class="text-slate-500 hover:text-blue-400 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="text-slate-500 hover:text-blue-600 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<!-- LinkedIn -->
+<a aria-label="LinkedIn" class="text-slate-500 hover:text-blue-500 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
 </body>
-
 </html>

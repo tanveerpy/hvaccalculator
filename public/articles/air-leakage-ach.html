@@ -1,208 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Leakage, ACH, and HVAC Load: The Infiltration Factor | HVACCalc</title>
-    <meta name="description"
-        content="Drafty house? Learn how Air Changes per Hour (ACH) and infiltration impact your HVAC Manual J calculation and sizing.">
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="../assets/js/theme-config.js"></script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Air Leakage, ACH, and HVAC Load: The Infiltration Factor | HVACCalc</title>
+<meta content="Drafty house? Learn how Air Changes per Hour (ACH) and infiltration impact your HVAC Manual J calculation and sizing." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="../assets/js/theme-config.js"></script>
+<style>
         body {
             font-family: 'Inter', sans-serif;
         }
     </style>
-</head>
-
+<link href="https://hvac-manual-j-calculator.netlify.app/articles/air-leakage-ach.html" rel="canonical"/></head>
 <body class="bg-gray-50 text-slate-900">
-    <!-- Header -->
-            <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="../index.html" class="flex items-center group">
-                        <span class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
-                    </a>
-                </div>
-
-                <!-- Main Nav -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Calculator</a>
-                    <a href="../blog.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Blog</a>
-                    <a href="../about.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">About</a>
-                    <a href="../contact.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <article class="max-w-4xl mx-auto px-4 py-12">
-        <div class="mb-8">
-            <a href="../blog.html" class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                </svg>
+<!-- Header -->
+<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<!-- Logo -->
+<div class="flex items-center">
+<a class="flex items-center group" href="../index.html">
+<span class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
+</a>
+</div>
+<!-- Main Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../index.html">Calculator</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../blog.html">Blog</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../about.html">About</a>
+<a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition" href="../contact.html">Contact</a>
+</div>
+</div>
+</div>
+</nav>
+<article class="max-w-4xl mx-auto px-4 py-12">
+<div class="mb-8">
+<a class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1" href="../blog.html">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
                 Back to Blog
             </a>
-        </div>
-
-        <header class="mb-10 text-center">
-            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Air Leakage, ACH, and HVAC
+</div>
+<header class="mb-10 text-center">
+<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Air Leakage, ACH, and HVAC
                 Load: What Manual J Accounts For</h1>
-            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">It's the "Invisible Load." Learn why a
+<p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">It's the "Invisible Load." Learn why a
                 drafty home requires a significantly larger HVAC system than a tight one.</p>
-        </header>
-
-        <img src="../assets/images/blog-2.webp" alt="Drafty window causing air leakage"
-            class="w-full rounded-2xl shadow-xl mb-12 border border-slate-100">
-
-        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
-            <p class="lead text-xl text-slate-700 font-medium">
+</header>
+<img alt="Drafty window causing air leakage" class="w-full rounded-2xl shadow-xl mb-12 border border-slate-100" src="../assets/images/blog-2.webp"/>
+<div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+<p class="lead text-xl text-slate-700 font-medium">
                 You can buy the most efficient windows and the thickest insulation, but if your house is full of holes,
                 you're losing the battle.
             </p>
-
-            <p>
-                <strong>Air leakage hvac load</strong> accounts for the unconditioned air that sneaks into your home
+<p>
+<strong>Air leakage hvac load</strong> accounts for the unconditioned air that sneaks into your home
                 through cracks, gaps, and vents. In older homes, this "Infiltration" can make up 30-40% of the heating
                 and cooling bill.
             </p>
-
-            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
-                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Rate Your Draftiness</h3>
-                <p class="text-blue-800 mb-4">Our calculator allows you to select "Tight," "Average," or "Leaky" to
+<div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+<h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Rate Your Draftiness</h3>
+<p class="text-blue-800 mb-4">Our calculator allows you to select "Tight," "Average," or "Leaky" to
                     adjust the calculation accordingly.</p>
-                <a href="../index.html"
-                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline">Start
-                    Calculation &rarr;</a>
-            </div>
-
-            <h2>What is Infiltration?</h2>
-            <p>
+<a class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline" href="../index.html">Start
+                    Calculation →</a>
+</div>
+<h2>What is Infiltration?</h2>
+<p>
                 Infiltration is outside air entering the house uncontrolled. It happens due to two forces:
             </p>
-            <ol class="list-decimal pl-6 space-y-2">
-                <li><strong>Wind Pressure:</strong> Wind blowing against the house forces air into cracks on one side
+<ol class="list-decimal pl-6 space-y-2">
+<li><strong>Wind Pressure:</strong> Wind blowing against the house forces air into cracks on one side
                     and sucks it out the other.</li>
-                <li><strong>Stack Effect:</strong> In winter, warm air rises and escapes through the attic
+<li><strong>Stack Effect:</strong> In winter, warm air rises and escapes through the attic
                     (exfiltration), sucking cold air in from the basement/crawlspace (infiltration) to replace it.</li>
-            </ol>
-
-            <h2>Understanding ACH (Air Changes per Hour)</h2>
-            <p>
+</ol>
+<h2>Understanding ACH (Air Changes per Hour)</h2>
+<p>
                 Engineers measure <strong>ach hvac calculation</strong> factors to quantify leakiness.
             </p>
-            <p>
-                <strong>Definition:</strong> 1 ACH means the entire volume of air in your house is replaced by outside
+<p>
+<strong>Definition:</strong> 1 ACH means the entire volume of air in your house is replaced by outside
                 air once every hour.
             </p>
-            <ul class="list-disc pl-6">
-                <li><strong>Old/Leaky House:</strong> 0.75 to 1.5 ACH (The air changes 18-24 times a day!).</li>
-                <li><strong>Average Home:</strong> 0.40 to 0.50 ACH.</li>
-                <li><strong>Tight/New Home:</strong> 0.20 to 0.35 ACH.</li>
-            </ul>
-
-            <h2>Latent Load: The Humidity Nightmare</h2>
-            <p>
-                <strong>Infiltration cooling load</strong> isn't just about temperature (Sensible Load). In humid
+<ul class="list-disc pl-6">
+<li><strong>Old/Leaky House:</strong> 0.75 to 1.5 ACH (The air changes 18-24 times a day!).</li>
+<li><strong>Average Home:</strong> 0.40 to 0.50 ACH.</li>
+<li><strong>Tight/New Home:</strong> 0.20 to 0.35 ACH.</li>
+</ul>
+<h2>Latent Load: The Humidity Nightmare</h2>
+<p>
+<strong>Infiltration cooling load</strong> isn't just about temperature (Sensible Load). In humid
                 climates, that outside air brings gallons of water vapor with it.
             </p>
-            <p>
+<p>
                 Your air conditioner has to work double-duty: first to remove the humidity (Latent), then to cool the
                 air. If you have high air leakage, your AC might spend 50% of its energy just fighting the humidity
                 coming through the cracks.
             </p>
-
-            <h2>Duct Leakage: The Silent Killer</h2>
-            <p>
-                <strong>Duct leakage hvac load</strong> is often calculated separately, but it's related.
-                <br>
+<h2>Duct Leakage: The Silent Killer</h2>
+<p>
+<strong>Duct leakage hvac load</strong> is often calculated separately, but it's related.
+                <br/>
                 If your ducts are in a hot attic (140°F) and they leak even 10% of the air, you are:
             </p>
-            <ol class="list-decimal pl-6 space-y-2">
-                <li>Pumping expensive cold air into the attic.</li>
-                <li>Sucking dusty, hot attic insulation fiberglass into your home (Negative pressure).</li>
-            </ol>
-            <p>
+<ol class="list-decimal pl-6 space-y-2">
+<li>Pumping expensive cold air into the attic.</li>
+<li>Sucking dusty, hot attic insulation fiberglass into your home (Negative pressure).</li>
+</ol>
+<p>
                 This is why <strong>manual j infiltration</strong> calculations ask heavily about duct location. Keeping
                 ducts inside the "conditioned space" (like dropped ceilings) is vastly more efficient than attics.
             </p>
-
-            <h2>Air Sealing > Bigger AC</h2>
-            <p>
+<h2>Air Sealing &gt; Bigger AC</h2>
+<p>
                 If your home is leaky, the solution isn't to buy a bigger unit to "overpower" the drafts. The solution
                 is <strong>air sealing hvac sizing</strong> reduction.
             </p>
-            <p>
+<p>
                 Spending $500 on caulk, foam, and weatherstripping can often lower your load requirement by 0.5
                 Tons—saving you $1,500 on the equipment cost.
             </p>
-
-            <h2>How to Measure It Properly</h2>
-            <p>
+<h2>How to Measure It Properly</h2>
+<p>
                 To get a truly accurate number, professionals use a "Blower Door Test." They put a big fan in your door,
                 depressurize the house, and measure exactly how much air leaks in.
             </p>
-            <p>
-                <a href="hiring-hvac-pro.html" class="text-blue-600 font-bold hover:underline">Read Next: When You
-                    Should Hire a Pro for a Blower Door/Manual J test &rarr;</a>
-            </p>
-
-            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center">
-                <h3 class="text-2xl font-bold mb-4">Estimate Your Leakage</h3>
-                <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Not sure if your home is Tight or Leaky? Use our
+<p>
+<a class="text-blue-600 font-bold hover:underline" href="hiring-hvac-pro.html">Read Next: When You
+                    Should Hire a Pro for a Blower Door/Manual J test →</a>
+</p>
+<div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center">
+<h3 class="text-2xl font-bold mb-4">Estimate Your Leakage</h3>
+<p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">Not sure if your home is Tight or Leaky? Use our
                     tool to see how it affects your tonnage.</p>
-                <a href="../index.html"
-                    class="inline-block px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">Run
+<a class="inline-block px-8 py-4 bg-blue-600 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors" href="../index.html">Run
                     Scenarios</a>
-            </div>
-
-        </div>
-    </article>
-
-    <!-- Footer -->
-            <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
-            <!-- Col 1: Logo & Tagline -->
-            <div class="text-center md:text-left">
-                <a href="../index.html" class="inline-block mb-4">
-                    <span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span class="text-white">Calc</span></span>
-                </a>
-                <p class="text-sm text-slate-500">Professional-grade Manual J load calculations for homeowners and DIYers.</p>
-                <p class="text-xs text-slate-600 mt-2">&copy; 2026 HVAC Load Calculator.</p>
-            </div>
-
-            <!-- Col 2: Links (Centered) -->
-            <div class="flex flex-col items-center space-y-3">
-                <a href="../index.html" class="hover:text-white transition">Home</a>
-                <a href="../blog.html" class="hover:text-white transition">Blog</a>
-                <a href="../privacy.html" class="hover:text-white transition">Privacy Policy</a>
-                <a href="../terms.html" class="hover:text-white transition">Terms of Service</a>
-                <a href="../contact.html" class="hover:text-white transition">Contact</a>
-            </div>
-
-            <!-- Col 3: Social Icons -->
-            <div class="flex justify-center md:justify-end space-x-6">
-                <!-- Twitter/X -->
-                <a href="#" class="text-slate-500 hover:text-blue-400 transition" aria-label="Twitter">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <!-- Facebook -->
-                <a href="#" class="text-slate-500 hover:text-blue-600 transition" aria-label="Facebook">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                <!-- LinkedIn -->
-                <a href="#" class="text-slate-500 hover:text-blue-500 transition" aria-label="LinkedIn">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
+</div>
+</div>
+</article>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+<!-- Col 1: Logo & Tagline -->
+<div class="text-center md:text-left">
+<a class="inline-block mb-4" href="../index.html">
+<span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span class="text-white">Calc</span></span>
+</a>
+<p class="text-sm text-slate-500">Professional-grade Manual J load calculations for homeowners and DIYers.</p>
+<p class="text-xs text-slate-600 mt-2">© 2026 HVAC Load Calculator.</p>
+</div>
+<!-- Col 2: Links (Centered) -->
+<div class="flex flex-col items-center space-y-3">
+<a class="hover:text-white transition" href="../index.html">Home</a>
+<a class="hover:text-white transition" href="../blog.html">Blog</a>
+<a class="hover:text-white transition" href="../privacy.html">Privacy Policy</a>
+<a class="hover:text-white transition" href="../terms.html">Terms of Service</a>
+<a class="hover:text-white transition" href="../contact.html">Contact</a>
+</div>
+<!-- Col 3: Social Icons -->
+<div class="flex justify-center md:justify-end space-x-6">
+<!-- Twitter/X -->
+<a aria-label="Twitter" class="text-slate-500 hover:text-blue-400 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="text-slate-500 hover:text-blue-600 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<!-- LinkedIn -->
+<a aria-label="LinkedIn" class="text-slate-500 hover:text-blue-500 transition" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
 </body>
-
 </html>
