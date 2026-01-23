@@ -185,6 +185,22 @@ const Calculator = {
         }
         tips.push({ type: 'compliance', title: '2026 SEER2 Compliance', desc: `Mandatory: ${seerMsg}` });
 
+        // A2L Refrigerant Safety (ASHRAE 15 & UL 60335-2-40)
+        // 2026 Mandate: New units use mildly flammable refrigerants (e.g., R-454B).
+        // Estimate Charge: ~4 lbs per Ton.
+        // Safety Limit (Simplified 20% LFL): ~0.004 lbs/ft³.
+        const roomVol = data.area * data.ceiling_height;
+        const estimatedCharge = (totalCooling / 12000) * 4; // lbs
+        const maxCharge = roomVol * 0.004;
+
+        if (estimatedCharge > maxCharge) {
+            tips.push({
+                type: 'warning',
+                title: 'A2L Refrigerant Safety Warning',
+                desc: `New 2026 systems use flammable refrigerants. A ${(totalCooling / 12000).toFixed(1)} Ton unit (Est. ${estimatedCharge.toFixed(1)} lbs charge) may exceed safety limits for a ${roomVol.toLocaleString()} ft³ space. Ensure adequate ventilation or choose a smaller system.`
+            });
+        }
+
         return tips;
     }
 };
