@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manual J Load Calculation Example: 2,000 Sq Ft Single-Family Home | HVACCalc</title>
+    <meta
+        content="See a real-world Manual J calculation example for a 2,000 sq ft home. We break down the math, insulation factors, and why 'Rule of Thumb' sizing fails."
+        name="description" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="../assets/js/theme-config.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link href="https://writeoffcalc.com/articles/manual-j-calculation-example-2000-sq-ft.html" rel="canonical" />
+</head>
+
+<body class="bg-gray-50 text-slate-900">
+    <!-- Header -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a class="flex items-center group" href="../index.html">
+                        <span
+                            class="text-xl font-extrabold text-blue-600 tracking-tight group-hover:text-blue-700 transition">HVAC<span
+                                class="text-slate-900 group-hover:text-slate-700 transition">Calc</span></span>
+                    </a>
+                </div>
+                <!-- Main Nav -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../index.html">Calculator</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../blog.html">Blog</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../about.html">About</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-slate-900 transition"
+                        href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <div class="mb-8">
+            <a class="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1" href="../blog.html">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2"></path>
+                </svg>
+                Back to Blog
+            </a>
+        </div>
+
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Manual J Load Calculation
+                Example: 2,000 Sq Ft Home</h1>
+            <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">Walk through a real-world residential
+                Manual J example to see how insulation, windows, and climate determine the perfect HVAC size.</p>
+        </header>
+
+        <div class="h-64 md:h-96 w-full relative overflow-hidden rounded-2xl shadow-xl mb-12 border border-slate-100">
+            <img alt="Manual J Load Calculation Example showing a 2000 sq ft home and thermal blueprint"
+                class="w-full h-full object-cover" height="800" src="../assets/images/manual-j-example-2000sqft.webp"
+                width="1200" />
+        </div>
+
+        <div class="prose prose-lg prose-slate mx-auto max-w-3xl">
+            <p class="lead text-xl text-slate-700 font-medium">
+                One of the most common questions we get is: "I have a 2,000 square foot house. How many tons of AC do I
+                need?"
+            </p>
+            <p>
+                If a contractor answers that question instantly without asking about your windows, insulation, or
+                location, <strong>run</strong>. They are using a "Rule of Thumb," and they are likely about to sell you
+                the wrong system.
+            </p>
+            <p>
+                To demonstrate why precision matters, we’re going to run a <strong>Manual J Calculation example</strong>
+                on two different 2,000 sq ft homes. Both have the exact same floor plan, but the results will shock you.
+            </p>
+
+            <h2>The Scenario: 2,000 Sq Ft Single-Family Home</h2>
+            <p>
+                Let's pretend we have a standard 2-story colonial home.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Size:</strong> 2,000 Square Feet</li>
+                <li><strong>Shape:</strong> Rectangular, 25' x 40' footprint</li>
+                <li><strong>Location:</strong> Dallas, Texas (Hot Climate)</li>
+            </ul>
+
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-xl">
+                <h3 class="text-blue-900 font-bold text-lg mt-0 mb-2">Want to skip the math?</h3>
+                <p class="text-blue-800 mb-4">You don't need to do this by hand. Our free tool runs these physics
+                    equations for you instantly.</p>
+                <a class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors no-underline"
+                    href="../index.html">Calculate Your Own Load →</a>
+            </div>
+
+            <h3>Case A: The "Old & Drafty" 1950s Build</h3>
+            <p>
+                This version of our house hasn't been updated in decades. It represents a typical <strong>residential
+                    manual j example</strong> for an older home.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Insulation:</strong> R-11 in walls (fiberglass batts, sagging), R-19 in attic.</li>
+                <li><strong>Windows:</strong> Single-pane clear glass, aluminum frames.</li>
+                <li><strong>Air Tightness:</strong> Leaky (0.80 ACH - Air Changes per Hour).</li>
+                <li><strong>Ducts:</strong> Located in a hot attic, leaky.</li>
+            </ul>
+
+            <h4>The Calculation Result</h4>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-100 text-left">
+                            <th class="py-3 px-4 font-bold text-gray-700">Load Component</th>
+                            <th class="py-3 px-4 font-bold text-gray-700">Heat Gain (BTU/hr)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Windows (Solar Gain & Conduction)</td>
+                            <td class="py-2 px-4 text-red-600 font-mono">18,500</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Walls & Roof</td>
+                            <td class="py-2 px-4 text-red-600 font-mono">12,200</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Infiltration (Air Leakage)</td>
+                            <td class="py-2 px-4 text-red-600 font-mono">6,800</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Internal Gains (People/Appliances)</td>
+                            <td class="py-2 px-4 text-red-600 font-mono">3,400</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Duct Losses</td>
+                            <td class="py-2 px-4 text-red-600 font-mono">11,000</td>
+                        </tr>
+                        <tr class="border-t border-gray-300 bg-gray-50 font-bold">
+                            <td class="py-3 px-4">TOTAL COOLING LOAD</td>
+                            <td class="py-3 px-4 text-xl">51,900 BTUs (~4.5 Tons)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-sm text-gray-500 mt-2 italic">*Simplified values for demonstration.</p>
+
+            <p>
+                <strong>Verdict:</strong> This house needs a massive <strong>4.5 or 5-ton system</strong> just to keep
+                up with the Dallas heat, largely because the ducts are in the attic and the windows are like holes in
+                the wall.
+            </p>
+
+            <h3>Case B: The "High-Performance" 2024 Build</h3>
+            <p>
+                Now, let's take the same <strong>2000 sq ft hvac btu</strong> footprint but build it to modern code
+                standards.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Insulation:</strong> R-21 spray foam in walls, R-49 blown-in attic.</li>
+                <li><strong>Windows:</strong> Double-pane, Low-E coating, vinyl frames.</li>
+                <li><strong>Air Tightness:</strong> Tight (0.35 ACH).</li>
+                <li><strong>Ducts:</strong> Insulated and located inside the conditioned space (soffits).</li>
+            </ul>
+
+            <h4>The Calculation Result</h4>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-100 text-left">
+                            <th class="py-3 px-4 font-bold text-gray-700">Load Component</th>
+                            <th class="py-3 px-4 font-bold text-gray-700">Heat Gain (BTU/hr)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Windows (Solar Gain & Conduction)</td>
+                            <td class="py-2 px-4 text-green-700 font-mono">7,200</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Walls & Roof</td>
+                            <td class="py-2 px-4 text-green-700 font-mono">4,100</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Infiltration (Air Leakage)</td>
+                            <td class="py-2 px-4 text-green-700 font-mono">1,800</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Internal Gains (People/Appliances)</td>
+                            <td class="py-2 px-4 text-green-700 font-mono">3,400</td>
+                        </tr>
+                        <tr class="border-t border-gray-100">
+                            <td class="py-2 px-4">Duct Losses</td>
+                            <td class="py-2 px-4 text-green-700 font-mono">0 (Inside conditioned space)</td>
+                        </tr>
+                        <tr class="border-t border-gray-300 bg-gray-50 font-bold">
+                            <td class="py-3 px-4">TOTAL COOLING LOAD</td>
+                            <td class="py-3 px-4 text-xl">16,500 BTUs (~1.5 Tons)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <strong>Verdict:</strong> The exact same size house needs only <strong>1.5 tons</strong> of cooling!
+            </p>
+
+            <h3>The Lesson: Square Footage is Irrelevant</h3>
+            <p>
+                If you used the "500 sq ft per ton" rule of thumb on Case B, you would have installed a 4-ton unit. That
+                unit would be <strong>250% oversized</strong>. It would turn on, run for 3 minutes, cool the air
+                instantly, and shut off before removing any humidity. The result? A cold, clammy, moldy house and
+                equipment failure within 7 years.
+            </p>
+            <p>
+                This <strong>hvac load calculation example</strong> proves that construction quality matters far more
+                than floor area.
+            </p>
+
+            <h3>How to Get Your Calculation</h3>
+            <p>
+                You don't need to guess which category your home falls into. By measuring your windows and checking your
+                insulation type, you can get a customized load calculation that fits your specific situation.
+            </p>
+
+            <div class="mt-12 p-8 bg-slate-900 rounded-2xl text-white text-center shadow-2xl">
+                <h3 class="text-3xl font-bold mb-4">Run Your Numbers</h3>
+                <p class="text-slate-300 text-lg mb-8 max-w-xl mx-auto">See if your home is a "Case A" or a "Case B" in
+                    under 2 minutes.</p>
+                <a class="inline-block px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50"
+                    href="../index.html">Start Free Manual J Calc</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+            <!-- Col 1: Logo & Tagline -->
+            <div class="text-center md:text-left">
+                <a class="inline-block mb-4" href="../index.html">
+                    <span class="text-2xl font-extrabold text-blue-500 tracking-tight">HVAC<span
+                            class="text-white">Calc</span></span>
+                </a>
+                <p class="text-sm text-slate-500">Professional-grade Manual J load calculations for homeowners and
+                    DIYers.</p>
+                <p class="text-xs text-slate-600 mt-2">© 2026 HVAC Load Calculator.</p>
+            </div>
+            <!-- Col 2: Links (Centered) -->
+            <div class="flex flex-col items-center space-y-3">
+                <a class="hover:text-white transition" href="../index.html">Home</a>
+                <a class="hover:text-white transition" href="../blog.html">Blog</a>
+                <a class="hover:text-white transition" href="../privacy.html">Privacy Policy</a>
+                <a class="hover:text-white transition" href="../terms.html">Terms of Service</a>
+                <a class="hover:text-white transition" href="../contact.html">Contact</a>
+            </div>
+            <!-- Col 3: Social Icons -->
+            <div class="flex justify-center md:justify-end space-x-6">
+                <a aria-label="Twitter" class="text-slate-500 hover:text-blue-400 transition" href="#">
+                    <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </svg>
+                </a>
+                <a aria-label="Facebook" class="text-slate-500 hover:text-blue-600 transition" href="#">
+                    <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z">
+                        </path>
+                    </svg>
+                </a>
+                <a aria-label="LinkedIn" class="text-slate-500 hover:text-blue-500 transition" href="#">
+                    <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
