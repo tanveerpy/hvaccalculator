@@ -35,6 +35,10 @@
         rel="stylesheet">
 
 
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7838469019748860"
+        crossorigin="anonymous"></script>
+
     <?php include __DIR__ . '/../partials/schema.php'; ?>
     <style>
         body {
